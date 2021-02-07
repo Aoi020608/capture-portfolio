@@ -1,5 +1,8 @@
 import React from "react";
+import styled from 'styled-components';
 
+import { About, Description, Hide, Image  } from '../styles';
+ 
 //import icon
 import clock from '../img/clock.svg';
 import diaphragm from '../img/diaphragm.svg'
@@ -9,11 +12,11 @@ import home2 from '../img/home2.png';
 
 const ServiceSection = () => {
     return (
-        <div className="services">
-            <div className="description">
+        <Service>
+            <Description>
                 <h2>High <span>quality</span> services</h2>
-                <div className="cards">
-                    <div className="card">
+                <Cards>
+                    <Card>
                         <div className="icon">
                             <img 
                                 src={clock} 
@@ -21,8 +24,9 @@ const ServiceSection = () => {
                             />
                             <h3>Efficient</h3>
                         </div>
-                    </div>
-                    <div className="card">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </Card>
+                    <Card>
                         <div className="icon">
                             <img 
                                 src={teamwork} 
@@ -30,8 +34,9 @@ const ServiceSection = () => {
                             />
                             <h3>Teamwork</h3>
                         </div>
-                    </div>
-                    <div className="card">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </Card>
+                    <Card>
                         <div className="icon">
                             <img 
                                 src={diaphragm} 
@@ -39,8 +44,9 @@ const ServiceSection = () => {
                             />
                             <h3>Diaphragm</h3>
                         </div>
-                    </div>
-                    <div className="card">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </Card>
+                    <Card>
                         <div className="icon">
                             <img 
                                 src={money} 
@@ -48,14 +54,45 @@ const ServiceSection = () => {
                             />
                             <h3>Money</h3>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="image">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </Card>
+                </Cards>
+            </Description>
+            <Image>
                 <img src={home2} alt="home2"/>
-            </div>
-        </div>
+            </Image>
+        </Service>
     );
 }
+
+const Service = styled(About)`
+    h2 {
+        padding-bottom: 5rem;
+    }
+    p {
+        width: 70%;
+        padding: 2rem 0rem 4rem 0rem;
+    }
+`;
+
+const Cards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const Card = styled.div`
+    flex-basis: 20rem;
+    .icon {
+        display: flex;
+        align-items: center;
+        h3 {
+            margin-left: 1rem;
+            background: white;
+            color: black;
+            padding: 1rem;
+        }
+    }
+
+`
 
 export default ServiceSection;
