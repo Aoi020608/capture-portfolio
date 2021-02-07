@@ -4,6 +4,7 @@ import home1 from '../img/home1.png';
 import { About, Description, Image, Hide } from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnim, fade, photoAnim } from "../animaton";
+import Wave from './Wave';
 
 
 const AboutSection = () => {
@@ -26,8 +27,9 @@ const AboutSection = () => {
                 <motion.button variants={fade}>Contact us</motion.button>
             </Description>
             <Image>
-                <motion.img variants={photoAnim} src={home1} alt="guy woth a camera" />
+                <motion.img variants={photoAnim} intial="hidden" animate="show" src={home1} alt="guy woth a camera" />
             </Image>
+            <Wave />
         </About>
     );
 }
