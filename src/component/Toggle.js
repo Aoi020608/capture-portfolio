@@ -13,4 +13,4 @@ const Toggle = ({ children, title }) => {
     );
 }
 
-export default Toggle;
+export default Toggle;  

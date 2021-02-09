@@ -1,8 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
+import { About, Description, Hide, Image } from '../styles';
+import { fade, scrollReveal } from "../animaton";
+import { UseScroll } from "./useScroll";
 
-import { About, Description, Hide, Image  } from '../styles';
- 
 //import icon
 import clock from '../img/clock.svg';
 import diaphragm from '../img/diaphragm.svg'
@@ -10,16 +11,21 @@ import money from "../img/money.svg";
 import teamwork from '../img/teamwork.svg';
 import home2 from '../img/home2.png';
 
+
+
 const ServiceSection = () => {
+    
+    const [element, controls] = UseScroll();
+
     return (
-        <Service>
+        <Service variants={scrollReveal} animate={controls} initial="hidden" ref={element}>
             <Description>
                 <h2>High <span>quality</span> services</h2>
                 <Cards>
                     <Card>
                         <div className="icon">
-                            <img 
-                                src={clock} 
+                            <img
+                                src={clock}
                                 alt="icon"
                             />
                             <h3>Efficient</h3>
@@ -28,8 +34,8 @@ const ServiceSection = () => {
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img 
-                                src={teamwork} 
+                            <img
+                                src={teamwork}
                                 alt="icon"
                             />
                             <h3>Teamwork</h3>
@@ -38,8 +44,8 @@ const ServiceSection = () => {
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img 
-                                src={diaphragm} 
+                            <img
+                                src={diaphragm}
                                 alt="icon"
                             />
                             <h3>Diaphragm</h3>
@@ -48,8 +54,8 @@ const ServiceSection = () => {
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img 
-                                src={money} 
+                            <img
+                                src={money}
                                 alt="money"
                             />
                             <h3>Money</h3>
@@ -59,7 +65,7 @@ const ServiceSection = () => {
                 </Cards>
             </Description>
             <Image>
-                <img src={home2} alt="home2"/>
+                <img src={home2} alt="home2" />
             </Image>
         </Service>
     );
