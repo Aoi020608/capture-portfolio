@@ -58,11 +58,11 @@ export const lineAnim = {
 }
 
 export const slider = {
-    hidden: { x: '-130%', skew: '45deg' },
+    hidden: { x: "-130%", skew: "45deg" },
     show: {
-        x: '100%',
+        x: "100%",
         skew: "0deg",
-        transition: { ease: 'easeOut', duration: 1 }
+        transition: { ease: "easeOut", duration: 1 }
     }
 }
 
@@ -81,4 +81,12 @@ export const scrollReveal = {
             duration: 0.5,
         },
     },
+}
+
+export const swoopAdoop = {
+    hidden: { width: "0%" },
+    show: {
+        width: "100%",
+        transition: { ease: "easeOut", duration: 1 }
+    }
 }

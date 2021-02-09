@@ -5,12 +5,12 @@ import { AnimateSharedLayout } from "framer-motion";
 import Toggle from "./Toggle";
 
 import { scrollReveal } from '../animaton';
-import { UseScroll } from "./useScroll";
+import { useScroll } from "./useScroll";
 import { About, Description, Hide, Image } from "../styles";
 
 const FaqSection = () => {
 
-    const [element, controls] = UseScroll();
+    const [element, controls] = useScroll();
 
     return (
         <Faq
@@ -64,29 +64,29 @@ const FaqSection = () => {
 }
 
 const Faq = styled(About)`
-    display: block;
+    ddisplay: block;
     span {
-        display: block;
+      display: block;
     }
     h2 {
-        padding-bottom: 2rem;
-        font-weight: lighter;
+      padding-bottom: 2rem;
+      font-weight: lighter;
     }
     .faq-line {
-        background: #cccccc;
-        height: 0.2rem;
-        margin: 2rem 0rem;
-        width: 100%;
+      background: #cccccc;
+      height: 0.2rem;
+      margin: 2rem 0rem;
+      width: 100%;
     }
     .question {
-        padding: 3rem 0rem;
-        cursor: pointer;
+      padding: 3rem 0rem;
+      cursor: pointer;
     }
     .answer {
-        padding: 2rem 0rem;
-        p {
-            padding 1rem 0rem;
-        }
+      padding: 2rem 0rem;
+      p {
+        padding: 1rem 0rem;
+      }
     }
 `;
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { About, Description, Hide, Image } from '../styles';
 import { fade, scrollReveal } from "../animaton";
-import { UseScroll } from "./useScroll";
+import { useScroll } from "./useScroll";
 
 //import icon
 import clock from '../img/clock.svg';
@@ -15,7 +15,7 @@ import home2 from '../img/home2.png';
 
 const ServiceSection = () => {
     
-    const [element, controls] = UseScroll();
+    const [element, controls] = useScroll();
 
     return (
         <Service variants={scrollReveal} animate={controls} initial="hidden" ref={element}>
@@ -84,6 +84,9 @@ const Service = styled(About)`
 const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 1300px) {
+        justify-content: center;
+    }
 `;
 
 const Card = styled.div`
