@@ -7,7 +7,7 @@ import theracer from '../img/theracer-small.png';
 import goodtimes from "../img/goodtimes-small.png";
 //import animation
 import { motion } from "framer-motion";
-import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer} from "../animaton";
+import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from "../animaton";
 import { useScroll } from "../component/useScroll";
 import ScrollTop from "../component/ScrollTop";
 
@@ -64,7 +64,6 @@ const OurWork = () => {
         </Work>
     );
 }
-
 const Work = styled(motion.div)`
     min-height: 100vh;
     overflow: hidden;
