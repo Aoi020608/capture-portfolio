@@ -7,7 +7,7 @@ import theracer from '../img/theracer-small.png';
 import goodtimes from "../img/goodtimes-small.png";
 //import animation
 import { motion } from "framer-motion";
-import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer, swoopAdoop } from "../animaton";
+import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer} from "../animaton";
 import { useScroll } from "../component/useScroll";
 import ScrollTop from "../component/ScrollTop";
 
@@ -17,7 +17,13 @@ const OurWork = () => {
     const [element2, controls2] = useScroll();
 
     return (
-        <Work style={{ background: "#fff" }} variants={pageAnimation} initial='hidden' animate="show" exit="exit">
+        <Work
+            style={{ background: "#fff" }}
+            exit="exit"
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+        >
             <motion.div variants={sliderContainer}>
                 <Frame1 variants={slider}></Frame1>
                 <Frame2 variants={slider}></Frame2>
@@ -41,9 +47,15 @@ const OurWork = () => {
                     <img src={theracer} alt="theracer" />
                 </Link>
             </Movie>
-            <Movie ref={element2} variants={fade} animate={controls2} initial="hidden">
+
+            <Movie
+                ref={element2}
+                variants={fade}
+                animate={controls2}
+                initial="hidden"
+            >
                 <h2>Good Times</h2>
-                <motion.div variants={lineAnim} className="line"></motion.div >
+                <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/good-times">
                     <img src={goodtimes} alt="goodtimes" />
                 </Link>
@@ -57,12 +69,11 @@ const Work = styled(motion.div)`
     min-height: 100vh;
     overflow: hidden;
     padding: 5rem 10rem;
-
-    h2 {
-        padding: 1rem 0rem;
-    }
     @media (max-width: 1300px) {
         padding: 2rem 2rem;
+    }
+    h2 {
+        padding: 1rem 0rem;
     }
 `;
 
@@ -72,7 +83,6 @@ const Movie = styled(motion.div)`
         height: 0.5rem;
         background: #23d997;
         margin-bottom: 3rem;
-
     }
     img {
         width: 100%;
@@ -93,7 +103,7 @@ const Frame1 = styled(motion.div)`
     height: 100vh;
     background: #fffebf;
     z-index: 2;
-`
+`;
 
 const Frame2 = styled(Frame1)`
     background: #ff8efb;
